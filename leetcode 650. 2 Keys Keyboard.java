@@ -18,13 +18,13 @@ public class Solution {
     }
 
     int minStepsHelper(int target, int current, int copy, int steps) {
-        if (current > target)
+        if (current > target) {
             return Integer.MAX_VALUE;
-
-        if (current == target)
+        } else if (current == target) {
             return steps;
-        else
+        } else {
             return Integer.min(minStepsHelper(target, current + copy, copy, steps + 1),//copy from previous
                     minStepsHelper(target, current * 2, current, steps + 2));//creating new copy
+        }
     }
 }
