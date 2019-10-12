@@ -42,12 +42,8 @@ class Solution {
             return false;
         }
 
-        if (x == goalX && y == goalY) {
-            System.out.println("here, dir: " + direction);
-            if(existWall(x, y, maze, direction)) {
-                            System.out.println("here, dir: " + direction);
-                            return true;
-
+        if (x == goalX && y == goalY && existWall(x, y, maze, direction)) {
+            return true;
             }
         }
 
