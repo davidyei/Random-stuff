@@ -44,7 +44,6 @@ class Solution {
 
         if (x == goalX && y == goalY && existWall(x, y, maze, direction)) {
             return true;
-            }
         }
 
         if (direction == 'u' && x - 1 >= 0 && maze[x - 1][y] != 1) { //Check of the direction ball is going has no wall
